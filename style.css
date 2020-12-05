@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat' !important;
   height: 100%;
@@ -19,6 +23,12 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .abso img {
@@ -28,8 +38,49 @@ body {
   z-index: -1;
 }
 
+.abso .container {
+  position: relative;
+  height: 100%;
+}
+
+.abso .container .quote {
+  position: absolute;
+  top: 40px;
+  width: 50%;
+}
+
+.abso .container .quote .fetch {
+  cursor: pointer;
+}
+
+.abso .container .Timing {
+  position: absolute;
+  bottom: 40px;
+  z-index: 2;
+}
+
+.abso .container .Timing .gr {
+  margin-bottom: -20px;
+}
+
 .abso .container .Timing .time {
   font-size: 10rem;
-  font-weight: 400;
+  font-weight: 800;
+}
+
+@media all and (max-width: 1210px) {
+  .abso img {
+    height: 100% !important;
+    width: auto !important;
+  }
+  .quote {
+    top: 10px !important;
+  }
+  .Timing {
+    bottom: 10px !important;
+  }
+  .time {
+    font-size: 6.4rem !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

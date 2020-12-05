@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
 body{
     font-family: 'Montserrat' !important;
     height: 100%;
@@ -16,6 +19,8 @@ body{
     bottom: 0;
     right: 0;
     left: 0;
+    display: flex;
+    align-items: center;
     img{
         width: 100%;
         height: auto;
@@ -23,12 +28,47 @@ body{
         z-index: -1;
     }
     .container{
+        position: relative;
+        height: 100%;
+        .quote{
+            position: absolute;
+            top: 40px;
+            width: 50%;
+            .fetch{
+                cursor: pointer;
+            }
+        }
         .Timing{
+            position: absolute;
+            bottom: 40px;
+            z-index: 2;
+            .gr{
+                margin-bottom: -20px;
+            }
            .time{
             font-size: 10rem;
-            font-weight: 400;
+            font-weight: 800;
         } 
         }
         
     }
+}
+
+@media all and (max-width: 1210px){
+    .abso{
+        img{
+            height: 100% !important;
+            width: auto !important;
+        }
+    }
+        .quote{
+            top: 10px !important;
+        }
+        .Timing{
+            bottom: 10px !important;
+        } 
+
+        .time{
+            font-size: 6.4rem !important;
+        }
 }
